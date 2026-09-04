@@ -8,6 +8,17 @@ function App() {
   
   const [count, setCount] = useState(1)
 
+
+    const handleClick = async () => {
+    const response = await fetch(
+      "http://localhost:5000/api/test"
+    );
+
+    const data = await response.json();
+
+    console.log(data);
+  };
+
   return (
     <>
       <section id="center">
@@ -39,6 +50,9 @@ function App() {
             <use href="/icons.svg#documentation-icon"></use>
           </svg>
           <h2>Documentation</h2>
+           <button onClick={handleClick}>
+      Call Backend
+    </button>
           <p>Your questions, answered</p>
           <ul>
             <li>
@@ -121,3 +135,5 @@ function App() {
 }
 
 export default App
+
+
