@@ -11,7 +11,7 @@ function App() {
 
     const handleClick = async () => {
     const response = await fetch(
-      "http://localhost:5000/api/test"
+      "http://localhost:3000/api/test"
     );
 
     const data = await response.json();
